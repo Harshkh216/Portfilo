@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Khurana | Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    animation: fadeInUp 1.5s ease;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00f7ff;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Glass Effect Card */
+.card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255,255,255,0.2);
+}
+
+/* Grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Skills */
+.skill {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #00f7ff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #00f7ff;
+    color: black;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {opacity:0; transform: translateY(-50px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from {opacity:0; transform: translateY(50px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <h1>Hi, I'm Harsh 👋</h1>
+        <p>AI Student | Web Developer | Problem Solver</p>
+        <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+    </div>
+</div>
+
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a B.Tech Computer Science student specializing in Artificial Intelligence.
+            I love building real-world applications and solving problems using Java, Python, and Web Technologies.
+        </p>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Hospital Management System</h3>
+            <p>Role-based web system for managing hospital operations.</p>
+        </div>
+
+        <div class="card">
+            <h3>Snake & Ladder Game</h3>
+            <p>Python GUI game with animations and multiplayer logic.</p>
+        </div>
+
+        <div class="card">
+            <h3>Job Portal System</h3>
+            <p>Responsive job portal with login and job tracking.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">GitHub</div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: harshkh216@gmail.com</p>
+        <p>GitHub: github.com/Harshkh216</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Harsh Khurana</p>
+</footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
